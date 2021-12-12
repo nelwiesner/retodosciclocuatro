@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>WillyWonka Store | Usuarios</title>
+
+        <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/mytemplatestyle.css">
+    </head>
+    <body onload="loadUsers()">
+        <div class="wrapper">
+            <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                    <img class="logo-wonka" src="img/logowillybonka.jpeg"/>
+                  </li>                  
+                </ul>
+              </nav>
+            <div class="col-md-12">
+                <div class="card">
+                    <h3 class="card-title">Usuarios</h3>
+                    <div class="card-body p-0">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Identificación</th>
+                                    <th>Nombre</th>
+                                    <th>Dirección</th>
+                                    <th>Celular</th>
+                                    <th>Email</th>
+                                    <th>Zona</th>
+                                    <th>Tipo</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="Tabla-Users">
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="card-footer clearfix">
+                        <a href="createUser.html" class="btn btn-sm btn-success float-right">Crear Usuario</a>
+                      </div>
+                </div>
+                </div>
+            </div>            
+        </div>
+        <script src="js/willywonka.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/usercrud.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/mytemplate.js"></script>
+    </body>
+</html>
