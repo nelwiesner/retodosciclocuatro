@@ -347,7 +347,7 @@ function listarRespuestaUsuarios(items) {
 
 function borrarUsuario(id) {
     $.ajax({
-        url:"http://" + server + ":8080/api/user/"+id,
+        url:"http://" + server + "/api/user/"+id,
         type:'DELETE',
         contentType:"application/JSON",
 
@@ -381,7 +381,7 @@ function crearUsuario() {
 
     //Petición Ajax
     $.ajax({
-        url:"http://" + server + ":8080/api/user/new",
+        url:"http://" + server + "/api/user/new",
         data:datosPeticion,
         type:'POST',
         contentType:"application/JSON",
@@ -421,7 +421,7 @@ function updateUsuario() {
 
     //Petición Ajax
     $.ajax({
-        url:"http://" + server + ":8080/api/user/update",
+        url:"http://" + server + "/api/user/update",
         data:datosPeticion,
         type:'PUT',
         contentType:"application/JSON",
@@ -448,7 +448,7 @@ function validateupdate(){
 
     if(idproducto != null) {
         $.ajax({
-            url:"http://" + server + ":8080/api/user/"+idproducto,
+            url:"http://" + server + "/api/user/"+idproducto,
             type:'GET',
             contentType:"application/JSON",
 
