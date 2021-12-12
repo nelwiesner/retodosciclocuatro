@@ -58,7 +58,9 @@ public class UserService {
         }
     }
 
-
+    public User getUser(int id){
+        return repositorio.userExist(id).get() ;
+    }
 
     public boolean existeEmail(String email){
         return repositorio.existeEmail(email);

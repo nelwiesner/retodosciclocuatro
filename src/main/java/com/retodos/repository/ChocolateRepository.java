@@ -35,4 +35,9 @@ public class ChocolateRepository {
         Optional<Chocolate> chocolate=crudInterface.findById(reference);
         return chocolate;
     }
+
+    public Optional<Chocolate> productExist(String id){
+        Optional<Chocolate> chocolate = crudInterface.findById(id);
+        return chocolate;
+    }
 }

@@ -61,4 +61,9 @@ public class UserController {
     public boolean delete(@PathVariable("id") int id) {
         return servicio.delete(id);
     }
+
+    @GetMapping("{id}")
+    public User getUser(@PathVariable("id") int id) {
+        return servicio.getUser(id);
+    }
 }

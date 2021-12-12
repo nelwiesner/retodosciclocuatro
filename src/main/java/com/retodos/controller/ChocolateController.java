@@ -46,4 +46,9 @@ public class ChocolateController {
     public boolean delete(@PathVariable("reference") String reference) {
         return servicio.delete(reference);
     }
+
+    @GetMapping("{id}")
+    public Chocolate getProduct(@PathVariable("id") String id) {
+        return servicio.getProduct(id);
+    }
 }

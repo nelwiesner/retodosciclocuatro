@@ -50,4 +50,8 @@ public class ChocolateService {
             );
         }
     }
+
+    public Chocolate getProduct(String id) {
+        return repositorio.productExist(id).get();
+    }
 }

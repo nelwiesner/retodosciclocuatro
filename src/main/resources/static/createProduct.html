@@ -54,15 +54,15 @@
                                     Administrar Productos
                                 </p>
                             </a>
-                        </li>  
-                         <li class="nav-item">
+                        </li> 
+                        <li class="nav-item">
                             <a href="#" class="nav-link" onclick="cerrarsesion()">
                                 <i class="nav-icon fas fa-sign-out-alt"></i>
                                 <p>
                                     Cerrar sesion
                                 </p>
                             </a>
-                        </li>    
+                        </li>     
                     </ul>
                 </nav>
             </div>
@@ -74,67 +74,56 @@
                         <div class="card">
                             <div class="card-header border-0">
                                 <div class="d-flex justify-content-between">
-                                    <h3 class="card-title">Crear Nuevo Usuario</h3>
-                                    <a href="users.html">Ver Usuarios</a>
+                                    <h3 class="card-title">Crear Nuevo Producto</h3>
+                                    <a href="products.html">Ver Productos</a>
                                 </div>
                             </div>
                             <div class="card-body">
                                 <form onsubmit="return false;" id="loginForm">
                                     <div class="card-body">
                                         <div class="form-group">
-                                            <label for="identificacion">Identificación</label>
-                                            <input type="number" name="identificacion" class="form-control"
-                                                id="identificacion" placeholder="Ingrese Identificación">
+                                            <label for="reference">Referencia</label>
+                                            <input type="text" name="reference" class="form-control"
+                                                id="reference" placeholder="Ingrese Referencia">
                                         </div>
                                         <div class="form-group">
-                                            <label for="Nombre">Nombre</label>
-                                            <input type="text" name="nombre" class="form-control" id="nombre"
-                                                placeholder="Ingrese Nombre">
+                                            <label for="category">Categoria</label>
+                                            <input type="text" name="category" class="form-control" id="category"
+                                                placeholder="Ingrese Categoria">
                                         </div>
                                         <div class="form-group">
-                                            <label for="Direccion">Dirección</label>
-                                            <input type="text" name="direccion" class="form-control" id="direccion"
-                                                placeholder="Ingrese Dirección">
+                                            <label for="description">Descripción</label>
+                                            <input type="text" name="description" class="form-control" id="description"
+                                                placeholder="Ingrese Descripción">
                                         </div>
                                         <div class="form-group">
-                                            <label for="Celular">Telefono</label>
-                                            <input type="number" name="celular" class="form-control" id="celular"
-                                                placeholder="Ingrese Número de Telefono">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="email">Email</label>
-                                            <input type="email" name="email" class="form-control" id="email"
-                                                placeholder="Ingrese Email">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="Password">Contraseña</label>
-                                            <input type="password" name="password" class="form-control" id="password"
-                                                placeholder="Password">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="repeatPassword">Repita Contraseña</label>
-                                            <input type="password" name="repeatPassword" class="form-control" id="repeatPassword"
-                                                placeholder="Password">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="zona">Zona</label>
-                                            <input type="text" name="zona" class="form-control" id="zona"
-                                                placeholder="Ingrese Zona">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="tipo">Tipo</label>
-                                            <select class="form-control" id="type">
-                                                <option value="COORD">Coordinador de Zona</option>
-                                                <option value="ASE">Asesor Comercial</option>
-                                                <option value="ADM">Administrador</option>
+                                            <label for="availability">Disponibilidad</label>
+                                            <select class="form-control" id="availability">
+                                                <option value="True">True</option>
+                                                <option value="False">False</option>
                                             </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="price">Precio</label>
+                                            <input type="number" name="price" class="form-control" id="price"
+                                                placeholder="Ingrese Precio">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="quantity">Cantidad</label>
+                                            <input type="number" name="quantity" class="form-control" id="quantity"
+                                                placeholder="Cantidad">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="photography">Fotografia</label>
+                                            <input type="text" name="photography" class="form-control" id="photography"
+                                                placeholder="Ingrese Fotografia">
                                         </div>
                                     </div>
                                     <div class="card-footer">
                                         <button id="btn-create" type="submit" class="btn btn-primary"
-                                            onclick="validateUser()">Guardar</button>
+                                            onclick="validateProduct()">Guardar</button>
                                         <button id="btn-update" type="submit" class="btn btn-primary"
-                                            onclick="validateUpdateUser()">Actualizar</button>
+                                            onclick="validateUpdateProduct()">Actualizar</button>
                                     </div>
                                 </form>
                             </div>
@@ -149,7 +138,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/mytemplate.js"></script>
-    <script src="js/usercrud.js"></script>
+    <script src="js/productcrud.js"></script>
     <script src="js/jquery.validate.js"></script>
     <script src="js/additional-methods.js"></script>
 </body>
