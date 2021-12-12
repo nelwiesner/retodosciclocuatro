@@ -52,7 +52,7 @@ function listarRespuestaProductos(items) {
 
 function borrarProducto(id) {
     $.ajax({
-        url:"http://localhost:8080/api/chocolate/"+id,
+        url:"http://" + server + ":8080/api/chocolate/"+id,
         type:'DELETE',
         contentType:"application/JSON",
 
@@ -88,7 +88,7 @@ function validateupdate(){
 
     if(idproducto != null) {
         $.ajax({
-            url:"http://localhost:8080/api/chocolate/"+idproducto,
+            url:"http://" + server + ":8080/api/chocolate/"+idproducto,
             type:'GET',
             contentType:"application/JSON",
 
@@ -203,7 +203,7 @@ function updateProducto() {
 
     //Petición Ajax
     $.ajax({
-        url:"http://localhost:8080/api/chocolate/update",
+        url:"http://" + server + ":8080/api/chocolate/update",
         data:datosPeticion,
         type:'PUT',
         contentType:"application/JSON",
@@ -305,7 +305,7 @@ function crearProducto() {
     
         //Petición Ajax
         $.ajax({
-            url:"http://localhost:8080/api/chocolate/new",
+            url:"http://" + server + ":8080/api/chocolate/new",
             data:datosPeticion,
             type:'POST',
             contentType:"application/JSON",
