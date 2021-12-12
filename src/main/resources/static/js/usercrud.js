@@ -336,7 +336,7 @@ function listarRespuestaUsuarios(items) {
             <td><span class=\"zona\"></span>${items[i].zone}</td>
             <td><span class=\"tipo\"></span>${items[i].type}</td>
             <td>
-                <a href="createuser.html?id=${items[i].id}"><i class="nav-icon fas fa-edit"></i></a>
+                <a href="createusers.html?id=${items[i].id}"><i class="nav-icon fas fa-edit"></i></a>
                 <a href="#" onclick="borrarUsuario(${items[i].id})"><i class="nav-icon fas fa-trash"></i></a>
             </td>`);
         $tr.append($td);

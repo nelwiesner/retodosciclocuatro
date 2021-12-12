@@ -41,7 +41,7 @@ function listarRespuestaProductos(items) {
             <td><span class=\"cantidad\">${items[i].quantity}</span></td>
             <td><span class=\"foto\"></span>${items[i].photography}</td>            
             <td>
-                <a href="createproduct.html?id=${items[i].reference}"><i class="nav-icon fas fa-edit"></i></a>
+                <a href="createproducts.html?id=${items[i].reference}"><i class="nav-icon fas fa-edit"></i></a>
                 <a href="#" onclick="borrarProducto('${items[i].reference}')"><i class="nav-icon fas fa-trash"></i></a>
             </td>`);
         $tr.append($td);
@@ -52,7 +52,7 @@ function listarRespuestaProductos(items) {
 
 function borrarProducto(id) {
     $.ajax({
-        url:"http://" + server + ":8080/api/chocolate/"+id,
+        url:"http://" + server + "/api/chocolate/"+id,
         type:'DELETE',
         contentType:"application/JSON",
 
@@ -88,7 +88,7 @@ function validateupdate(){
 
     if(idproducto != null) {
         $.ajax({
-            url:"http://" + server + ":8080/api/chocolate/"+idproducto,
+            url:"http://" + server + "/api/chocolate/"+idproducto,
             type:'GET',
             contentType:"application/JSON",
 
@@ -203,7 +203,7 @@ function updateProducto() {
 
     //Petición Ajax
     $.ajax({
-        url:"http://" + server + ":8080/api/chocolate/update",
+        url:"http://" + server + "/api/chocolate/update",
         data:datosPeticion,
         type:'PUT',
         contentType:"application/JSON",
@@ -305,7 +305,7 @@ function crearProducto() {
     
         //Petición Ajax
         $.ajax({
-            url:"http://" + server + ":8080/api/chocolate/new",
+            url:"http://" + server + "/api/chocolate/new",
             data:datosPeticion,
             type:'POST',
             contentType:"application/JSON",
