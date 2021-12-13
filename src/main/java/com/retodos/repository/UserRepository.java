@@ -22,8 +22,16 @@ public class UserRepository {
     }
 
     public User save(User user){
+        int id=0;
+        try{
+            id = crudInterface.findTopByOrderByIdDesc().get().getId()+1;
+        }catch(Exception ex)
+        {
+            id=1;
+        }
+
         if(user.getId()==null) {
-            user.setId(crudInterface.findTopByOrderByIdDesc().get().getId()+1);
+            user.setId(id);
         }
         return crudInterface.save(user);
     }
