@@ -49,7 +49,7 @@ public class UserController {
         return servicio.existeEmail(email);
     }
 
-    @PutMapping("/all")
+    @PutMapping("/update")
     @ResponseStatus(HttpStatus.CREATED)
     public User update(@RequestBody User user)
     {

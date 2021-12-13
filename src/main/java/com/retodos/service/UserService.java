@@ -34,13 +34,7 @@ public class UserService {
     }
 
     public User update(User user) {        
-        if (repositorio.existeEmail(user.getEmail())) {
-            return repositorio.save(user);
-        } else {
-            throw new ResponseStatusException(
-                HttpStatus.NOT_FOUND, "User not found"
-            );
-        }
+        return repositorio.save(user);
     }
 
     public boolean delete(int id) {    
