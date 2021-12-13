@@ -1,6 +1,7 @@
 package com.retodos.service;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 import com.retodos.model.User;
@@ -63,9 +64,12 @@ public class UserService {
     }
 
     public User autenticarUsuario(String email,String password) {
-        Optional<User> usuario = repositorio.autenticarUsuario(email, password);
-
-        return usuario.get();
+        try{
+            Optional<User> usuario = repositorio.autenticarUsuario(email, password);
+            return usuario.get();
+        }catch(NoSuchElementException ex){
+            return new User();
+        }
     }
 
 }

@@ -43,6 +43,7 @@ public class ChocolateController {
     }
 
     @DeleteMapping("{reference}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public boolean delete(@PathVariable("reference") String reference) {
         return servicio.delete(reference);
     }

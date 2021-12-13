@@ -49,7 +49,7 @@ public class UserController {
         return servicio.existeEmail(email);
     }
 
-    @PutMapping("/update")
+    @PutMapping("/all")
     @ResponseStatus(HttpStatus.CREATED)
     public User update(@RequestBody User user)
     {
@@ -58,6 +58,7 @@ public class UserController {
 
     
     @DeleteMapping("{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public boolean delete(@PathVariable("id") int id) {
         return servicio.delete(id);
     }
