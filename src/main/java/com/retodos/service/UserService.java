@@ -25,12 +25,8 @@ public class UserService {
     }
 
     public User save(User user) {
-        if (user.getId() == null) {
-            if (existeEmail(user.getEmail()) == false) {
-                return repositorio.save(user);
-            } else {
-                return user;
-            }
+        if (existeEmail(user.getEmail()) == false) {
+            return repositorio.save(user);
         } else {
             return user;
         }
@@ -69,11 +65,7 @@ public class UserService {
     public User autenticarUsuario(String email,String password) {
         Optional<User> usuario = repositorio.autenticarUsuario(email, password);
 
-        if (usuario.isEmpty()) {
-            return new User(email, password, "NO DEFINIDO");
-        } else{
-            return usuario.get();
-        }
+        return usuario.get();
     }
 
 }
