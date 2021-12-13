@@ -421,7 +421,7 @@ function updateUsuario() {
 
     //Petición Ajax
     $.ajax({
-        url:"http://" + server + "/api/user/all",
+        url:"http://" + server + "/api/user/update",
         data:datosPeticion,
         type:'PUT',
         contentType:"application/JSON",
