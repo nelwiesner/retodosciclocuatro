@@ -226,7 +226,7 @@ function login() {
 
 function userExist(respuesta) {
     var nombre = respuesta.name;
-    if (nombre == "none") {
+    if (!nombre ) {
         alert("No existe un usuario");
     } else {
         //crea objeto javascript que contiene la información del usuario
